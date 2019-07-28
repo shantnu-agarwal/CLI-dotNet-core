@@ -62,13 +62,8 @@ namespace ConsoleAppCore
 		static void Main(string[] args)
 		{
 			startLogin();
-			Login.testsql();
-			
-			
-				
-			
-
-
+			SqlConnect sqlconnect = new SqlConnect();
+			sqlconnect.ShowAll();
 		}
 	}
 

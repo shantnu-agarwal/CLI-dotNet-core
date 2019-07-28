@@ -48,28 +48,6 @@ namespace ConsoleAppCore
 			} 
 		}
 
-		public static void testsql()
-		{
-			MySqlConnection con = new MySqlConnection("server=127.0.0.1;user id=root;database=schema1;password=welcome");
-			con.Open();
-			MySqlCommand cmd = new MySqlCommand("select * from abc",con);
-			MySqlDataAdapter adptr = new MySqlDataAdapter(cmd);
-			DataSet ds = new DataSet();
-			adptr.Fill(ds,"abc");
-			DataTable dt = ds.Tables["abc"];
-			foreach (DataRow row in dt.Rows)
-			{
-				foreach (DataColumn col in dt.Columns)
-				{
-					Console.Write(row[col] + "\t");
-				}
-
-				Console.WriteLine();
-			}
-			cmd.Dispose();
-			con.Close();
-			Console.ReadKey();
-		}
 
 	}
 }
