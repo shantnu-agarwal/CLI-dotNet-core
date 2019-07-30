@@ -1,6 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using System;
-using System.Data;
+﻿using System;
 using System.IO;
 
 namespace ConsoleAppCore
@@ -12,7 +10,6 @@ namespace ConsoleAppCore
 		
 		public Login()
 		{
-			/*Console.WriteLine("New Login Object Created.");*/
 			FileStream fs = new FileStream("credentials.dat", FileMode.Open);
 			BinaryReader br = new BinaryReader(fs);
 			password = br.ReadString();
