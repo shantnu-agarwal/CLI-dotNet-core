@@ -64,6 +64,9 @@ namespace ConsoleAppCore
 			startLogin();
 			SqlConnect sqlconnect = new SqlConnect();
 			sqlconnect.ShowAll();
+
+			var abc = "";
+			Console.Write(abc);
 		}
 	}
 
